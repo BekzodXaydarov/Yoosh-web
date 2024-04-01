@@ -28,7 +28,7 @@ export default function Navbar() {
           <Route path='/' element={<>
             <div className="nav_head">
               <h1>Hub</h1>
-              <i.Plus  />
+              <i.Plus />
             </div>
             <div className="nav_body">
               <Nav_card img={<i.Pencil />} title={'Blog post'} description={'Bridgette, whose "White H...'} path={''} />
