@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom"
 const Home = ({ prop }) => {
     const location = useLocation()
     return (<svg width="80" height="64" viewBox="0 0 80 64" fill="none" xmlns="http://www.w3.org/2000/svg" {...prop}>
-        {location.pathname == '/' ? <rect x="8" width="64" height="64" rx="12" fill="#4559AA" fill-opacity="0.16" /> : ""}
+        {location.pathname == '/' || location.pathname == '/chat' ? <rect x="8" width="64" height="64" rx="12" fill="#4559AA" fill-opacity="0.16" /> : ""}
         <rect x="16.75" y="8.75" width="46.5" height="46.5" rx="5.25" fill="#EFF1F1" />
         <rect x="16.75" y="8.75" width="46.5" height="46.5" rx="5.25" stroke="#EFF1F1" stroke-width="1.5" />
         <path fill-rule="evenodd" clip-rule="evenodd" d="M39.4565 21.4756C39.5278 21.4041 39.6125 21.3473 39.7058 21.3086C39.7991 21.2699 39.8991 21.25 40.0001 21.25C40.1011 21.25 40.2011 21.2699 40.2943 21.3086C40.3876 21.3473 40.4723 21.4041 40.5437 21.4756L49.7574 30.6893C49.8286 30.7607 49.8851 30.8455 49.9236 30.9388C49.962 31.032 49.9817 31.132 49.9816 31.2329V41.9822C49.9816 42.1858 49.9007 42.3811 49.7567 42.5251C49.6127 42.6691 49.4174 42.75 49.2138 42.75H42.3035C42.0999 42.75 41.9046 42.6691 41.7606 42.5251C41.6166 42.3811 41.5357 42.1858 41.5357 41.9822V35.8397H38.4644V41.9822C38.4644 42.1858 38.3836 42.3811 38.2396 42.5251C38.0956 42.6691 37.9003 42.75 37.6966 42.75H30.7864C30.5827 42.75 30.3874 42.6691 30.2434 42.5251C30.0994 42.3811 30.0186 42.1858 30.0186 41.9822V31.2329C30.0184 31.132 30.0381 31.032 30.0766 30.9388C30.115 30.8455 30.1715 30.7607 30.2428 30.6893L39.4565 21.4756ZM31.5542 31.5507V41.2144H36.9288V35.0719C36.9288 34.8683 37.0097 34.673 37.1537 34.529C37.2977 34.385 37.493 34.3041 37.6966 34.3041H42.3035C42.5071 34.3041 42.7024 34.385 42.8464 34.529C42.9904 34.673 43.0713 34.8683 43.0713 35.0719V41.2144H48.446V31.5507L40.0001 23.1049L31.5542 31.5507Z" fill="#191C1D" />
@@ -15,7 +15,7 @@ const Home = ({ prop }) => {
 const Star = ({ prop }) => {
     const location = useLocation()
     return (<svg width="80" height="64" viewBox="0 0 80 64" fill="none" xmlns="http://www.w3.org/2000/svg"{...prop}>
-        {location.pathname == '/Favs' ? <rect x="8" width="64" height="64" rx="12" fill="#4559AA" fill-opacity="0.16" /> : ""}
+        {location.pathname.includes('/Favs') ? <rect x="8" width="64" height="64" rx="12" fill="#4559AA" fill-opacity="0.16" /> : ""}
         <rect x="16.75" y="8.75" width="46.5" height="46.5" rx="5.25" fill="#EFF1F1" />
         <rect x="16.75" y="8.75" width="46.5" height="46.5" rx="5.25" stroke="#EFF1F1" stroke-width="1.5" />
         <g clip-path="url(#clip0_52619_8737)">
@@ -32,7 +32,7 @@ const Star = ({ prop }) => {
 const Icon = ({ prop }) => {
     const location = useLocation()
     return (<svg width="80" height="64" viewBox="0 0 80 64" fill="none" xmlns="http://www.w3.org/2000/svg" {...prop}>
-        {location.pathname == '/Ideas' ? <rect x="8" width="64" height="64" rx="12" fill="#4559AA" fill-opacity="0.16" /> : ""}
+        {location.pathname.includes('/Ideas') ? <rect x="8" width="64" height="64" rx="12" fill="#4559AA" fill-opacity="0.16" /> : ""}
         <g clip-path="url(#clip0_52619_8744)">
             <path d="M64 8H16V56H64V8Z" fill="#17255A" />
             <path d="M42.9238 39.3092L42.9704 34.8418L45.1251 36.9533V41.4672L42.9238 39.3092Z" fill="#E9D2F4" />
@@ -71,7 +71,7 @@ const Icon = ({ prop }) => {
 const BookCase = ({ prop }) => {
     const location = useLocation()
     return (<svg width="80" height="64" viewBox="0 0 80 64" fill="none" xmlns="http://www.w3.org/2000/svg" {...prop}>
-        {location.pathname == '/Reading' ? <rect x="8" width="64" height="64" rx="12" fill="#4559AA" fill-opacity="0.16" /> : ""}
+        {location.pathname.includes('/Reading') ? <rect x="8" width="64" height="64" rx="12" fill="#4559AA" fill-opacity="0.16" /> : ""}
         <g clip-path="url(#clip0_52619_8775)">
             <path d="M64 8H16V56H64V8Z" fill="#E9D2F4" />
             <path d="M36.2599 21.0898H34.9346V24.4172H36.2599V21.0898Z" fill="#44CF6C" />
@@ -147,7 +147,7 @@ const BookCase = ({ prop }) => {
 const Board = ({ prop }) => {
     const location = useLocation()
     return (<svg width="80" height="64" viewBox="0 0 80 64" fill="none" xmlns="http://www.w3.org/2000/svg" {...prop}>
-        {location.pathname == '/Essay' ? <rect x="8" width="64" height="64" rx="12" fill="#4559AA" fill-opacity="0.16" /> : ""}
+        {location.pathname.includes('/Essay') ? <rect x="8" width="64" height="64" rx="12" fill="#4559AA" fill-opacity="0.16" /> : ""}
         <g clip-path="url(#clip0_52619_8843)">
             <path d="M64 8H16V56H64V8Z" fill="#FFEAD0" />
             <path opacity="0.2" d="M30.2282 23.1172H50.4933C51.3179 23.1172 51.9803 23.7844 51.9803 24.609V40.0545C51.9803 40.8791 51.3131 41.5415 50.4933 41.5415H30.2282C29.4035 41.5415 28.7363 40.8743 28.7363 40.0545V24.609C28.7411 23.7844 29.4035 23.1172 30.2282 23.1172Z" fill="#191C1D" />
@@ -184,7 +184,7 @@ const Board = ({ prop }) => {
 const Globus = ({ prop }) => {
     const location = useLocation()
     return (<svg width="80" height="64" viewBox="0 0 80 64" fill="none" xmlns="http://www.w3.org/2000/svg" {...prop}>
-        {location.pathname == '/Course' ? <rect x="8" width="64" height="64" rx="12" fill="#4559AA" fill-opacity="0.16" /> : ""}
+        {location.pathname.includes('/Course' ) ? <rect x="8" width="64" height="64" rx="12" fill="#4559AA" fill-opacity="0.16" /> : ""}
         <g clip-path="url(#clip0_52619_8872)">
             <path d="M64 8H16V56H64V8Z" fill="#44CF6C" />
             <path d="M40.4502 38.9492V43.0561" stroke="#191C1D" stroke-width="0.38" stroke-linecap="round" stroke-linejoin="round" />

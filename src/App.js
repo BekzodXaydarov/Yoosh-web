@@ -92,7 +92,7 @@ const data = [
         id: 2, name: 'chilren body', children: [
           { id: 7, svg: <i.Atom />, title: 'Essay topic', description: 'That one seems to have the...', path: '' },
           { id: 8, svg: <i.Resources />, title: 'Resources', description: 'Checklist: Essay reading list', path: '' },
-          { id: 9, svg: <i.Chat />, title: 'Chat', description: 'Tasklist for the essay above', path: '/chat' },
+          { id: 9, svg: <i.Chat />, title: 'Chat', description: 'Tasklist for the essay above', path: '/Essay/chat' },
         ]
       },
     ]
