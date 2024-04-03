@@ -4,8 +4,27 @@ import { useLocation } from 'react-router-dom';
 
 export default function Navbar_component({ data }) {
     const { pathname } = useLocation()
+    const Pathname = (path) => {
+        let ph = pathname
+        let res = ''
+    if(path.includes('chat') && path != data[0].path){
+
+    for (let i = 0; i < ph.length; i++) {
+          if(ph[i] == '/'){
+            res += ph[i].replace('/','/ ')
+          }
+        res +=ph[i]
+          
+    }
+    let arr = res.split(' ')[1]
+    res = arr.replaceAll('/','')
+    return res == 'chat' ? "/":`/${res}`
+    }else{
+        return path
+    }
+    }
     const Data = useMemo(() =>
-        data.filter(f => f.path === pathname), [pathname, data]
+        data.filter(f => f.path.includes(Pathname(pathname))), [pathname, data]
     )
     const children_head = Data[0]?.children[0]?.children[0]
     const children_body = Data[0]?.children[1]?.children
