@@ -6,8 +6,8 @@ import * as i from '../assets/svgs/index'
 export default function Router() {
     return (
         <Routes>
-            <Route path='/' element={<i.Body />} />
-            <Route path='/chat' element={<Chat />} />
+            <Route path='*' element={<i.Body />} />
+            <Route path='/chat' element={<><h1>salom</h1></>} />
         </Routes>
     )
 }
