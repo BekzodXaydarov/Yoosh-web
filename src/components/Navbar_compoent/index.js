@@ -11,14 +11,13 @@ export default function Navbar_component({ data }) {
 
     for (let i = 0; i < ph.length; i++) {
           if(ph[i] == '/'){
-            res += ph[i].replace('/','/ ')
+            res += ph[i].replace('/',' ')
           }
         res +=ph[i]
           
     }
-    let arr = res.split(' ')[1]
-    res = arr.replaceAll('/','')
-    return res == 'chat' ? "/":`/${res}`
+    let string = res.split(' ')[1]
+    return res.trim() == '/chat' ? "/":string
     }else{
         return path
     }
