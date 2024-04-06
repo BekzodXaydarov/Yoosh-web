@@ -7,13 +7,11 @@
     text-decoration: none;
 }
 
-/* * div {
-    border: 1px solid black;
-} */
+
 
 .App {
     max-width: 1600px;
-    height: 730px;
+    height: 100vh;
     margin: 0 auto;
     display: flex;
     overflow-y: hidden;

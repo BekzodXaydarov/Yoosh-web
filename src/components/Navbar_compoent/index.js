@@ -44,9 +44,6 @@ export default function Navbar_component({ data }) {
                     })
                 }
             </div>
-            {children_head?.title}
-            <h1>salom</h1>
-
         </div>
     )
 }

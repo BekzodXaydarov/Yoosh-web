@@ -10,7 +10,7 @@
     max-width: 800px;
     flex-direction: column;
     width: 96px;
-    height: 800px;
+    height: auto;
     border-right: 2px solid #E0E3E3;
 }
 
@@ -38,7 +38,7 @@
 .nav .nav_body {
     padding: 15px;
     overflow-y: auto;
-    height: 670px;
+    height: auto;
 }
 
 /* @media screen and (max-width:400px) {
