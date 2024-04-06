@@ -1,0 +1,58 @@
+.sign_cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+}
+
+.sign form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sign .logo {
+    width: 600px;
+    height: 730px;
+}
+
+.sign input {
+    border: 3px solid #4559AA;
+    background-color: transparent;
+    padding: 10px 15px;
+    outline: none;
+    width: 320px;
+    height: 50px;
+    border-radius: 15px;
+    color: black;
+}
+
+.sign input::placeholder {
+    color: #4559AA;
+}
+
+.sign .sign_btn {
+    border: none;
+    background-color: #4559AA;
+    color: white;
+    padding: 15px 120px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.sign .choose_img {
+    border: none;
+    padding: 10px 20px;
+    background-color: #4559AA;
+    color: white;
+    cursor: pointer;
+    border-radius: 15px;
+}

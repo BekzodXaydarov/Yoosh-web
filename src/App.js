@@ -1,7 +1,10 @@
 import Navbar from './pages/navbar/navbar';
 import Router from './routes';
+import { Routes, Route, useNavigate } from 'react-router-dom'
+import SignIn from './pages/SignIn/index'
 import './App.css';
 import * as i from './assets/svgs/index'
+import { useEffect } from 'react';
 
 const data = [
   {
@@ -116,13 +119,28 @@ const data = [
   },
 
 ]
+const Msgs = []
 
 function App() {
+  let local = JSON.parse(localStorage.getItem('data'))
+  const navigate = useNavigate()
+  function Navigate() {
+    if (!local) {
+      navigate('/')
+    }
+  }
+  Navigate()
   return (
-    <div className="App">
-      <Navbar data={data} />
-      <Router data={data} />
-    </div>
+    <>
+      {
+        local ? <div className="App">
+          <Navbar data={data} />
+          <Router data={data} Msgs={Msgs} local={local} />
+        </div> : <Routes>
+          <Route path='/' element={<SignIn navigate={navigate} />} />
+        </Routes>
+      }
+    </>
   );
 }
 
