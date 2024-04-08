@@ -4,7 +4,6 @@ import { Routes, Route, useNavigate } from 'react-router-dom'
 import SignIn from './pages/SignIn/index'
 import './App.css';
 import * as i from './assets/svgs/index'
-import { useEffect } from 'react';
 
 const data = [
   {

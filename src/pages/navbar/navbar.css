@@ -46,21 +46,3 @@
     width: 20px;
 }
 
-
-/* @media screen and (max-width:400px) {
-    .navbar {
-        display: block;
-    }
-
-    .list,
-    .list_head,
-    .list_footer {
-        display: flex;
-    }
-
-    .list {
-        height: 65px !important;
-    }
-
-
-} */
