@@ -118,7 +118,7 @@ const data = [
   },
 
 ]
-const Msgs = []
+
 
 function App() {
   let local = JSON.parse(localStorage.getItem('data'))
@@ -133,10 +133,10 @@ function App() {
     <>
       {
         local ? <div className="App">
-          <Navbar data={data} />
-          <Router data={data} Msgs={Msgs} local={local} />
+          <Navbar data={data} local={local}  />
+          <Router data={data}  local={local} />
         </div> : <Routes>
-          <Route path='/' element={<SignIn navigate={navigate} />} />
+          <Route path='/' element={<SignIn  />} />
         </Routes>
       }
     </>

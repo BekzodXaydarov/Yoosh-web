@@ -7,7 +7,7 @@ import Navbar_component from '../../components/Navbar_compoent/index'
 
 
 
-export default function Navbar({data}) {
+export default function Navbar({data,local}) {
   const {pathname} = useLocation()
   return (
     <div className='navbar'>
@@ -30,8 +30,8 @@ export default function Navbar({data}) {
             data.map((x) => {
               return(
                 <>
-                <Route key={x.id} path={pathname == x.path ? x.path:"*"} element={<Navbar_component data={data} />} />
-                <Route key={x.id} path={`${x.path}/chat`} element={<Navbar_component data={data} />} />
+                <Route key={x.id} path={pathname == x.path ? x.path:"*"} element={<Navbar_component data={data} local={local} />} />
+                <Route key={x.id} path={`${x.path}/chat`} element={<Navbar_component data={data} local={local} />} />
                 </>
               )})
           }

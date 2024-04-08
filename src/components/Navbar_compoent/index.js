@@ -2,25 +2,27 @@ import React, { useMemo } from 'react'
 import Nav_card from '../nav_card/nav_card'
 import { useLocation } from 'react-router-dom';
 
-export default function Navbar_component({ data }) {
+export default function Navbar_component({ data, local }) {
     const { pathname } = useLocation()
     const Pathname = (path) => {
         let ph = pathname
         let res = ''
-    if(path.includes('chat') && path != data[0].path){
-
-    for (let i = 0; i < ph.length; i++) {
-          if(ph[i] == '/'){
-            res += ph[i].replace('/',' ')
-          }
-        res +=ph[i]
-          
-    }
-    let string = res.split(' ')[1]
-    return res.trim() == '/chat' ? "/":string
-    }else{
-        return path
-    }
+        if (path.includes('chat') && path != data[0].path) {
+            for (let i = 0; i < ph.length; i++) {
+                if (ph[i] == '/') {
+                    res += ph[i].replace('/', ' ')
+                }
+                res += ph[i]
+            }
+            let string = res.split(' ')[1]
+            if (!local) {
+                return '/'
+            } else {
+                return res.trim() == '/chat' ? "/" : string
+            }
+        } else {
+            return path
+        }
     }
     const Data = useMemo(() =>
         data.filter(f => f.path.includes(Pathname(pathname))), [pathname, data]
