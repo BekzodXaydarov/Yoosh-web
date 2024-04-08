@@ -29,8 +29,8 @@ export default function Navbar({ data, local }) {
             data.map((x) => {
               return (
                 <>
-                  <Route path={pathname === x.path ? x.path : "*"} element={<NavbarComponent data={data} local={local} />} />
-                  <Route path={`${x.path}/chat`} element={<NavbarComponent data={data} local={local} />} />
+                  <Route path={pathname === x.path ? x.path : "*"} element={<NavbarComponent  children={x.children} />} />
+                  <Route path={`${x.path}/chat`} element={<NavbarComponent  children={x.children} />} />
                 </>
               )
             })

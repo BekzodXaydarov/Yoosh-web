@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import * as i from '../../assets/svgs/index'
+// import * as i from '../../assets/svgs/index'
 import Frame from '../../assets/images/Frame 2608139.png'
 import './sign.css'
 
@@ -25,9 +25,12 @@ export default function SignIn({ navigate }) {
     <div className='sign_cont'>
       <div className="sign">
         <form onSubmit={(e) => HandleSumbit(e)}>
-          <i.Logo />
-          <h2>Hi,Yoosher</h2>
-          <h2>Your account is nearly ready</h2>
+          {/* <i.Logo />
+          <h2>Hi,Yoosher</h2> */}
+          <div>
+          <h2 style={{textAlign:"center"}}>Your account is nearly ready</h2>
+          <h4>Choose your username (can be changed later).</h4>
+          </div>
           <div>
             <input type="text" className={error ? name === '' ? 'error_input' : "":null} placeholder='username' value={name} onChange={(e) => setName(e.target.value)} />
             {
@@ -41,6 +44,11 @@ export default function SignIn({ navigate }) {
             }
           </div>
           <button className='sign_btn' type='sumbit'>Sign in</button>
+          <div className="footer">
+            <h4>Yoosh is based on</h4>
+            <h4>[<b>matrix</b>]</h4>
+            <p>An open network for source,decentralized communation. <br />2021 The Matrix.org Foundation  C.I.C.</p>
+          </div>
         </form>
         <img src={Frame} className='logo' alt="" />
       </div>

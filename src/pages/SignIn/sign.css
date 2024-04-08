@@ -2,7 +2,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100% !important;
 }
 
 .sign {
@@ -18,6 +17,11 @@
     justify-content: space-between;
     flex-direction: column;
     gap: 30px;
+}
+
+.sign div h4{
+    margin-top: 15px;
+    text-align: center;
 }
 
 .sign .logo {
@@ -68,4 +72,11 @@
 }
 .error_input::placeholder {
     color: red !important;
+}
+.footer {
+    text-align: center;
+}
+.footer p {
+    margin-top: 15px;
+    color: #687281;
 }

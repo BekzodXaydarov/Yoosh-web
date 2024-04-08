@@ -1,5 +1,7 @@
 .nav_card {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     gap: 15px;
     cursor: pointer;
     padding: 17px 17px;
@@ -28,4 +30,22 @@
 .nav_card div span {
     color: #747778;
     font-size: 15px;
+}
+
+.texts {
+    width: 290px;
+}
+.right {
+    display: none;
+    border-radius: 10px;
+    padding: 5px;
+}
+.nav_card:hover .right{
+    display: block;
+}
+.act .right {
+    display: block;
+}
+.right:hover{
+    background-color:#CFD3EF;
 }
