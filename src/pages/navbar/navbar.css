@@ -1,7 +1,6 @@
 .navbar {
     display: flex;
     width: 468px !important;
-    height: 100%;
 }
 
 .navbar .list {
@@ -11,7 +10,6 @@
     max-width: 800px;
     flex-direction: column;
     width: 96px;
-    height: 800px;
     border-right: 2px solid #E0E3E3;
 }
 
@@ -24,7 +22,7 @@
 }
 
 .nav {
-    width: 372px;
+    width: 382px;
     border: 2px solid #E0E3E3;
 }
 
@@ -37,7 +35,7 @@
 }
 
 .nav .nav_body {
-    padding: 15px;
+    padding: 14px 0 0 14px;
     overflow: auto;
     height: 100vh;
 }
@@ -45,4 +43,3 @@
 .nav_body::-webkit-scrollbar {
     width: 20px;
 }
-

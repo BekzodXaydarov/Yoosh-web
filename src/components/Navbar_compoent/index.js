@@ -1,37 +1,30 @@
 import React, { useMemo } from 'react'
-import Nav_card from '../nav_card/nav_card'
+import NavCard from '../nav_card/nav_card'
 import { useLocation } from 'react-router-dom';
 
-export default function Navbar_component({ data, local }) {
+export default function NavbarComponent({ data }) {
     const { pathname } = useLocation()
     const Pathname = (path) => {
-        let ph = pathname
         let res = ''
-        if (path.includes('chat') && path != data[0].path) {
-            for (let i = 0; i < ph.length; i++) {
-                if (ph[i] == '/') {
-                    res += ph[i].replace('/', ' ')
-                }
-                res += ph[i]
+        if (path.includes('chat') && path !== data[0].path) {
+            for (let i = 0; i < path.length; i++) {
+                res += path[i]
             }
-            let string = res.split(' ')[1]
-            if (!local) {
-                return '/'
-            } else {
-                return res.trim() == '/chat' ? "/" : string
-            }
+            let ph = res.replaceAll('/', ' ').split(' ')[1]
+            return res.trim() === `/${ph}` ? '/' : `/${ph}`
         } else {
             return path
         }
+
     }
-    const Data = useMemo(() =>
-        data.filter(f => f.path.includes(Pathname(pathname))), [pathname, data]
-    )
+    let ph = Pathname(pathname)
+    const Data = useMemo(() => data.filter(f => f.path === ph), [ph, data])
     const children_head = Data[0]?.children[0]?.children[0]
     const children_body = Data[0]?.children[1]?.children
+    console.log();
     return (
         <div>
-            <div className="nav_head">
+            <div className="nav_head" key={children_head.id}>
                 <h1>{children_head.title}</h1>
                 {children_head.svg}
             </div>
@@ -40,7 +33,7 @@ export default function Navbar_component({ data, local }) {
                     children_body.map((item) => {
                         return (
                             <>
-                                <Nav_card img={item.svg} title={item.title} description={item.description} path={item.path} />
+                                <NavCard key={item.id} img={item.svg} title={item.title} description={item.description} path={item.path} />
                             </>
                         )
                     })

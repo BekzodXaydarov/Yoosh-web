@@ -1,11 +1,11 @@
 .nav_card {
     display: flex;
-    align-items: center;
     gap: 15px;
     cursor: pointer;
     padding: 17px 17px;
     border-radius: 15px;
 }
+
 
 .act {
     display: flex;
@@ -15,6 +15,10 @@
     padding: 17px 17px;
     border-radius: 15px;
     background-color: #DCE1FF;
+}
+
+.nav_card h3 {
+    font-weight: 300;
 }
 
 .nav_card:hover {

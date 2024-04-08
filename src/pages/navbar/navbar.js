@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import * as i from '../../assets/svgs/index'
 import Profile from '../../assets/images/profile.png'
 import './navbar.css'
 import { Route, Routes, Link, useLocation } from 'react-router-dom'
-import Navbar_component from '../../components/Navbar_compoent/index'
+import NavbarComponent from '../../components/Navbar_compoent/index'
 
 
-
-export default function Navbar({data,local}) {
-  const {pathname} = useLocation()
+export default function Navbar({ data, local }) {
+  const { pathname } = useLocation()
   return (
     <div className='navbar'>
       <ul className="list">
@@ -28,12 +27,13 @@ export default function Navbar({data,local}) {
         <Routes>
           {
             data.map((x) => {
-              return(
+              return (
                 <>
-                <Route key={x.id} path={pathname == x.path ? x.path:"*"} element={<Navbar_component data={data} local={local} />} />
-                <Route key={x.id} path={`${x.path}/chat`} element={<Navbar_component data={data} local={local} />} />
+                  <Route path={pathname === x.path ? x.path : "*"} element={<NavbarComponent data={data} local={local} />} />
+                  <Route path={`${x.path}/chat`} element={<NavbarComponent data={data} local={local} />} />
                 </>
-              )})
+              )
+            })
           }
         </Routes>
 

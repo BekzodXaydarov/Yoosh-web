@@ -14,5 +14,5 @@
     height: 100vh;
     margin: 0 auto;
     display: flex;
-    overflow-y: hidden;
+    overflow: hidden !important;
 }

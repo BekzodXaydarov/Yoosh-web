@@ -16,7 +16,7 @@ const data = [
       {
         id: 2, name: 'chilren body', children: [
           { id: 1, svg: <i.Pencil />, title: 'Blog post', description: 'Bridgette, whose "White H...', path: '' },
-          { id: 2, svg: <i.Art />, title: 'Art', description: 'beautiful NFT art project: htt...', path: '' },
+          { id: 2, svg: <i.Art />, title: 'Art', description: 'beautiful NFT art project: htt...', path: '/art' },
           { id: 3, svg: <i.TikTok />, title: 'TikTok Videos', description: 'Video idea #54: reading near... ', path: '' },
           { id: 4, svg: <i.Book />, title: 'Books', description: 'Checklist: Thesis reading list', path: '' },
           { id: 5, svg: <i.Request />, title: 'Qoutes', description: '“Everyone thinks of changin...', path: '' },
@@ -130,16 +130,16 @@ function App() {
   }
   Navigate()
   return (
-    <>
+    <div>
       {
-        local ? <div className="App">
-          <Navbar data={data} local={local}  />
-          <Router data={data}  local={local} />
+        local ? <div  className='App'>
+          <Navbar data={data} local={local} />
+          <Router data={data} local={local} />
         </div> : <Routes>
-          <Route path='/' element={<SignIn  />} />
+          <Route path='/' element={<SignIn navigate={navigate} />} />
         </Routes>
       }
-    </>
+    </div>
   );
 }
 
