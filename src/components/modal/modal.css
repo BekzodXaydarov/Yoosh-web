@@ -5,9 +5,10 @@
   width: 296px;
   height: 270px;
   border-radius: 24px;
-  opacity: 0px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   padding: 17px;
+  background-color: white;
+
 }
 .modal ul {
     margin-top: 15px;

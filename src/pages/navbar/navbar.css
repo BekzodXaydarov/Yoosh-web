@@ -32,6 +32,7 @@
 }
 .nav_head button {
     border: none;
+    background-color: white;
 }
 
 .nav .nav_body {

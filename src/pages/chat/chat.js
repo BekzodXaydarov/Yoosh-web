@@ -1,7 +1,6 @@
 import React from 'react'
 import './chat.css'
 import * as i from '../../assets/svgs/index'
-import select from '../../assets/images/icon.png'
 import miss from '../../assets/images/avatar-container.png'
 
 export default function chat() {
