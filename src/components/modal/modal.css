@@ -1,24 +1,39 @@
 .modal {
   position: absolute;
+<<<<<<< HEAD
   margin-left: 370px;
   margin-top: 200px;
   width: 296px;
+=======
+  margin-left: 400px;
+  width: 260px;
+>>>>>>> 92070ad050918dae05efd97dfc4de02bd3861482
   height: 270px;
   border-radius: 24px;
   opacity: 0px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+<<<<<<< HEAD
   padding: 14px;
+=======
+  padding: 17px;
+>>>>>>> 92070ad050918dae05efd97dfc4de02bd3861482
 }
 .modal ul {
     margin-top: 15px;
 }
 .modal ul li {
+<<<<<<< HEAD
     width: 280px;
     height: 48px;
+=======
+    width: 100%;
+    height: 30px;
+>>>>>>> 92070ad050918dae05efd97dfc4de02bd3861482
     display: flex;
     align-items: center;
     cursor: pointer;
     border-radius: 15px;
+<<<<<<< HEAD
     margin-top: 5px;
 }
 .modal ul li:hover {
@@ -33,4 +48,9 @@
 .modal .modal_title {
     color: #AAACAD;
     margin-left: 15px;
+=======
+}
+.modal ul li:hover {
+    background-color: #F1F2F9;
+>>>>>>> 92070ad050918dae05efd97dfc4de02bd3861482
 }

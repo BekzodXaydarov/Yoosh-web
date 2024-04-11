@@ -29,8 +29,8 @@ export default function Navbar({ data,open,setOpen }) {
             data.map((x) => {
               return (
                 <>
-                  <Route path={pathname === x.path ? x.path : "*"} element={<NavbarComponent open={open} setOpen={setOpen}  children={x.children} />} />
-                  <Route path={`${x.path}/chat`} element={<NavbarComponent open={open} setOpen={setOpen}  children={x.children} />} />
+                  <Route path={pathname === x.path ? x.path : "*"} element={<NavbarComponent   children={x.children} />} />
+                  <Route path={`${x.path}/chat`} element={<NavbarComponent   children={x.children} />} />
                 </>
               )
             })
