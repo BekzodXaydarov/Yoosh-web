@@ -6,11 +6,11 @@ import { Route, Routes, Link, useLocation } from 'react-router-dom'
 import NavbarComponent from '../../components/Navbar_compoent/index'
 
 
-export default function Navbar({ data,open,setOpen }) {
+export default function Navbar({ data, open, setOpen }) {
   const { pathname } = useLocation()
   return (
     <div className='navbar'>
-      <ul className="list" onClick={()=>setOpen(false)}>
+      <ul className="list" onClick={() => setOpen(false)}>
         <div className="list_head" >
           {
             data.map((x) => {
@@ -29,8 +29,8 @@ export default function Navbar({ data,open,setOpen }) {
             data.map((x) => {
               return (
                 <>
-                  <Route path={pathname === x.path ? x.path : "*"} element={<NavbarComponent   children={x.children} />} />
-                  <Route path={`${x.path}/chat`} element={<NavbarComponent   children={x.children} />} />
+                  <Route path={pathname === x.path ? x.path : "*"} element={<NavbarComponent open={open} setOpen={setOpen} children={x.children} />} />
+                  <Route path={`${x.path}/chat`} element={<NavbarComponent open={open} setOpen={setOpen} children={x.children} />} />
                 </>
               )
             })

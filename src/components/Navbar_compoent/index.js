@@ -1,17 +1,20 @@
-import React, { useState } from 'react'
+import React from 'react'
 import NavCard from '../nav_card/nav_card'
 import Modal from '../modal/index'
 
-export default function NavbarComponent({ children }) {
+export default function NavbarComponent({ children, open, setOpen }) {
     const children_head = children[0]?.children[0]
     const children_body = children[1]?.children
-    const [open, setopen] = useState(false)
     return (
         <div key={children.key}>
             <div className="nav_head">
                 <h1>{children_head.title}</h1>
-                 {children_head.svg}
-                {/* <button onClick={() => setOpen(!open)}>{children_head.svg}</button> */}
+                <button onClick={() => setOpen(!open)}>{children_head.svg}</button>
+                {
+                    open && (
+                        <Modal />
+                    )
+                }
             </div>
             <div className="nav_body">
                 {
