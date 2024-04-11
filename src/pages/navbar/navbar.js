@@ -13,8 +13,8 @@ export default function Navbar({ data, open, setOpen }) {
       <ul className="list" onClick={() => setOpen(false)}>
         <div className="list_head" >
           {
-            data.map((x) => {
-              return <Link key={x.id} to={x.path} >{x.svg}</Link>
+            data.map((x,index) => {
+              return <Link key={index} to={x.path}>{x.svg}</Link>
             })
           }
         </div>
@@ -26,11 +26,11 @@ export default function Navbar({ data, open, setOpen }) {
       <div className="nav" >
         <Routes>
           {
-            data.map((x) => {
+            data.map((x,index) => {
               return (
                 <>
-                  <Route path={pathname === x.path ? x.path : "*"} element={<NavbarComponent open={open} setOpen={setOpen} children={x.children} />} />
-                  <Route path={`${x.path}/chat`} element={<NavbarComponent open={open} setOpen={setOpen} children={x.children} />} />
+                  <Route key={index} path={pathname === x.path ? x.path : "*"} element={<NavbarComponent open={open} setOpen={setOpen} children={x.children} />} />
+                  <Route key={index} path={`${x.path}/chat`} element={<NavbarComponent open={open} setOpen={setOpen} children={x.children} />} />
                 </>
               )
             })
