@@ -3,9 +3,10 @@ import { Route, Routes } from 'react-router-dom'
 import Chat from '../pages/chat/chat'
 import * as i from '../assets/svgs/index'
 
-export default function Router({ data }) {
+export default function Router({ data,open,setOpen}) {
     return (
-        <Routes>
+        <div onClick={()=>setOpen(false)}>
+            <Routes>
             <Route path='*' element={<i.Body />} />
             {
                 data.map((x)=>{
@@ -16,5 +17,6 @@ export default function Router({ data }) {
             }
 
         </Routes>
+        </div>
     )
 }

@@ -2,15 +2,16 @@ import Navbar from './pages/navbar/navbar';
 import Router from './routes';
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import SignIn from './pages/SignIn/index'
-import './App.css';
 import * as i from './assets/svgs/index'
+import { useState } from 'react';
+import './App.css';
 
 const data = [
   {
     id: 1, svg: <i.Home />, path: '/', children: [
       {
         id: 1, name: 'chilren head', children: [
-          { id: 1, title: 'Hub', svg: <i.Plus /> }
+          { id: 1, title: 'Hub', svg: <i.Plus  /> }
         ]
       },
       {
@@ -129,12 +130,13 @@ function App() {
     }
   }
   Navigate()
+  const [open,setOpen] = useState(false)
   return (
     <div>
       {
         local ? <div  className='App'>
-          <Navbar data={data} local={local} />
-          <Router data={data} local={local} />
+          <Navbar data={data} local={local} open={open} setOpen={setOpen} />
+          <Router data={data} local={local} open={open} setOpen={setOpen} />
         </div> : <Routes>
           <Route path='/' element={<SignIn navigate={navigate} />} />
         </Routes>

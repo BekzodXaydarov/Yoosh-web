@@ -1,4 +1,36 @@
 .modal {
-    position: absolute;
-    margin-left: 400px;
+  position: absolute;
+  margin-left: 370px;
+  margin-top: 200px;
+  width: 296px;
+  height: 270px;
+  border-radius: 24px;
+  opacity: 0px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 14px;
+}
+.modal ul {
+    margin-top: 15px;
+}
+.modal ul li {
+    width: 280px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-top: 5px;
+}
+.modal ul li:hover {
+    background-color: #F1F2F9;
+}
+.modal ul li h4{
+    margin-left: 20px;
+}
+.modal ul li svg {
+    margin-left: 10px;
+}
+.modal .modal_title {
+    color: #AAACAD;
+    margin-left: 15px;
 }

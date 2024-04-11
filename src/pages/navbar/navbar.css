@@ -1,24 +1,19 @@
 .navbar {
     display: flex;
-    width: 468px !important;
+    width: 468px;
 }
 
 .navbar .list {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 800px;
     flex-direction: column;
-    width: 96px;
     border-right: 2px solid #E0E3E3;
+    width: 96px;
 }
 
 .navbar .list li {
     cursor: pointer;
-}
-
-.list_footer {
-    height: 200px;
 }
 
 .nav {
@@ -27,17 +22,22 @@
 }
 
 .nav .nav_head {
-    padding: 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: 2px solid #E0E3E3;
+    padding: 15px;
+    width: 382px;
+    height: 70px;
+}
+.nav_head button {
+    border: none;
 }
 
 .nav .nav_body {
     padding: 14px 0 0 14px;
     overflow: auto;
-    height: 100vh;
+    height: 650px;
 }
 
 .nav_body::-webkit-scrollbar {
